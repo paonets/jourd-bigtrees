@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Pridi', serif;
     background: #fff;
 }
 
@@ -27,14 +27,12 @@ h4,
 h5,
 h6 {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Kanit', sans-serif;
 }
 
 p {
-    margin: 0;
+    font-size: 1.2em;
     color: #333;
-    font-size: 1em;
-    line-height: 1.8;
 }
 
 ul {
@@ -91,12 +89,12 @@ body a:focus {
 
 /* header */
 .navbar-light .navbar-brand {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Pridi', serif;
     text-transform: uppercase;
     font-weight: 800;
     font-size: 0.7em;
     letter-spacing: 1px;
-    color: #d3b800;
+    color: #23d48f;
 }
 
 nav.navbar.fixed-top.navbar-expand-lg.navbar-light.navbar-fixed-top {
@@ -167,7 +165,7 @@ ul.navbar-nav.ml-lg-auto.text-center {
 .navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
-    color: #d3b800;
+    color: #23d48f;
 
 }
 
@@ -271,7 +269,7 @@ ul.header-w3_pvt li span {
 }
 
 .bg-theme {
-    background: #d3b800;
+    background: #23d48f;
 }
 
 /*-- //header --*/
@@ -329,7 +327,7 @@ label {
 }
 
 .modal-footer1 a {
-    color: #d3b800;
+    color: #23d48f;
 }
 
 .modal-content {
@@ -345,8 +343,8 @@ label {
     border: 10px solid #fff;
     border-radius: 0.3rem;
     outline: 0;
-    color: #fff;
-    font-family: 'Lato', sans-serif;
+    color: black;
+    font-family: 'Pridi', serif;
 }
 
 .right-w3l input[type="submit"] {
@@ -357,7 +355,7 @@ label {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Pridi', serif;
     cursor: pointer;
 }
 
@@ -375,7 +373,7 @@ label {
     text-transform: capitalize;
     margin: 0 auto;
     width: 100%;
-    background: #d3b800;
+    background: #23d48f;
 }
 
 .modal-body {
@@ -603,7 +601,7 @@ ul.callbacks_tabs {
 }
 
 .banner1 {
-    background: url(../images/banner1.jpg) bottom no-repeat;
+    background: url(../images/makkasan-eva03.jpg) bottom no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -612,7 +610,7 @@ ul.callbacks_tabs {
 }
 
 .banner2 {
-    background: url(../images/banner2.jpg) bottom no-repeat;
+    background: url(../images/makkasan-bodhi01.jpg) bottom no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -621,7 +619,7 @@ ul.callbacks_tabs {
 }
 
 .banner3 {
-    background: url(../images/banner3.jpg) bottom no-repeat;
+    background: url(../images/makkasan-train02.jpg) bottom no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -676,7 +674,7 @@ ul.callbacks_tabs {
 }
 
 .slider-info h3 span {
-    background: #d3b800;
+    background: #23d48f;
     padding: 0 10px;
 }
 
@@ -722,7 +720,7 @@ ul.callbacks_tabs {
     -moz-box-shadow: 5px 10px 10px 0px rgba(216, 216, 216, 0.78);
     box-shadow: 1px 15px 17px 0px rgba(180, 167, 167, 0.78);
     border-radius: 50%;
-    background: #d3b800;
+    background: #23d48f;
 }
 
 .abt-icon span {
@@ -776,7 +774,7 @@ h4.main-title-w3pvt {
 .w3lspvt-about-grids h4 {
     text-transform: capitalize;
     font-weight: 600;
-    color: #d3b800;
+    color: #23d48f;
     font-size: 1.3em;
 }
 
@@ -785,7 +783,7 @@ h4.main-title-w3pvt {
     height: 70px;
     line-height: 70px;
     border-radius: 50%;
-    border: 1px solid #d3b800;
+    border: 1px solid #23d48f;
     margin-bottom: 1em;
     font-size: 1.5em;
 }
@@ -794,10 +792,14 @@ h4.main-title-w3pvt {
 
 /* stats */
 section.w3_stats {
-    background: url(../images/banner1.jpg) no-repeat center;
+    background: url(../images/makkasan-train03.jpg) no-repeat center;
     background-size: cover;
     position: relative;
     z-index: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    
 }
 
 section.w3_stats:before {
@@ -839,6 +841,7 @@ h2.w3pvt-title {
 p.count-text {
     letter-spacing: 2px;
     font-weight: 600;
+    margin-top: 1.8em;
 }
 
 h4.abt-text {
@@ -1144,7 +1147,7 @@ button:active {
     line-height: 50px;
     background: #fff;
     border-radius: 50%;
-    color: #d3b800;
+    color: #23d48f;
 }
 
 .testi-text p span {
@@ -1159,7 +1162,7 @@ button:active {
 
 .carousel-indicators li {
     background-color: #000;
-    border: 1px solid #d3b800;
+    border: 1px solid #23d48f;
     cursor: pointer;
 }
 
@@ -1182,7 +1185,7 @@ button:active {
 }
 
 .carousel-indicators li {
-    border: 2px solid #d3b800;
+    border: 2px solid #23d48f;
     background: #fff;
 }
 
@@ -1229,7 +1232,7 @@ section {
     border-top-right-radius: 50px;
     border-bottom-left-radius: 150px;
     border-bottom-right-radius: 150px;
-    border: 5px solid #d3b800;
+    border: 5px solid #23d48f;
     box-shadow: 0 0 0 0px #000000, 0 0 0 10px #ffffff, 0 0 0 20px #e2e2e2, 0 0px 0 rgb(255, 255, 255);
     overflow-y: hidden;
     transition: 0.5s;
@@ -1242,11 +1245,11 @@ section {
 .container .column .box .title .fa {
     margin-top: 20px;
     font-size: 2em;
-    color: #d3b800;
+    color: #23d48f;
 }
 
 .title h5 {
-    color: #d3b800;
+    color: #23d48f;
     font-size: 1.2em;
     margin-top: 10px;
     text-transform: capitalize;
@@ -1350,13 +1353,13 @@ form.register-wthree .form-control {
 
 #contact iframe {
     width: 100%;
-    border: 3px solid #d3b800;
+    border: 3px solid #23d48f;
     padding: 1vw;
     min-height: 500px;
 }
 
 .contact-w3 span {
-    color: #d3b800;
+    color: #23d48f;
     font-size: 1.2em;
     display: inline-block;
     vertical-align: middle;
@@ -1390,7 +1393,7 @@ h5.cont-form {
     text-transform: capitalize;
     font-size: 1.7em;
     font-family: 'Lato', sans-serif;
-    color: #d3b800;
+    color: #23d48f;
     font-weight: 600;
 }
 
@@ -1403,7 +1406,7 @@ h5.cont-form {
 
 ul.d-flex.header-wthreelayouts li span {
     margin-right: 1em;
-    color: #d3b800;
+    color: #23d48f;
 }
 
 span.icon_twitter {
@@ -1894,8 +1897,3 @@ ul.social-iconsv2 li:last-child {
 }
 
 /* -- //Responsive code -- */
-
-.map-container {
-    width: 100%;
-    height: 300px;
-}

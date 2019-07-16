@@ -1,4 +1,4 @@
-[
+var makkasanTrees = [
   {
     "_id": "5d293215b8bfca3e0587b064",
     "level": "normal",
