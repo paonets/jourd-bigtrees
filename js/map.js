@@ -5,7 +5,10 @@ function initMap() {
     // styles: mapStyles
   });
 
-  var image = 'https://jourd-bigtrees.s3-ap-southeast-1.amazonaws.com/markers/tree1.png';
+  var image = 'http://jourd-bigtrees.s3-website-ap-southeast-1.amazonaws.com/images/tree-marker-1.png';
+  var imageA1 = 'http://jourd-bigtrees.s3-website-ap-southeast-1.amazonaws.com/images/tree-marker-award-1.png';
+  var imageA2 = 'http://jourd-bigtrees.s3-website-ap-southeast-1.amazonaws.com/images/tree-marker-award-2.png';
+  var imageA3 = 'http://jourd-bigtrees.s3-website-ap-southeast-1.amazonaws.com/images/tree-marker-award-3.png';
   
   makkasanTrees.forEach(function(item, index) {
     var marker = new google.maps.Marker({
@@ -57,18 +60,49 @@ function initMap() {
     if (latlng.length < 2) {
       return
     }
+
+    var icon = image
+    var award
+    if (item.award === 1) {
+      icon = imageA1
+      award = 'รางวัลชนะเลิศ'
+    } else if(item.award === 2) {
+      icon = imageA2
+      award = 'รางวัลรองชนะเลิศอันดับที่ 1'
+    } else if (item.award === 3) {
+      icon = imageA3
+      award = 'รางวัลรองชนะเลิศอันดับที่ 2'
+    }
+
+    var category
+    if (item.cat === 1) {
+      category = 'ต้นไม้ใหญ่สุด'
+    } else if (item.cat === 2) {
+      category = 'ต้นไม้สูงสุด'
+    } else if (item.cat === 3) {
+      category = 'ต้นไม้สวยสมบูรณ์'
+    } else if (item.cat === 4) {
+      category = 'ต้นไม้ทรงคุณค่า'
+    }
+
+
     var marker = new google.maps.Marker({
       position: {lat: parseFloat(latlng[0]), lng: parseFloat(latlng[1])},
       map: map2,
-      icon: image
+      icon: icon
     });
     marker.addListener('click', function() {
       var btModal = $('#bigtreesMapModal')
       btModal.find('.modal-title').text(item.name)
       btModal.find('.name').text(item.name)
+      if (item.award !== "") {
+        btModal.find('.award').text(award + ' หมวด' + category)
+      } else {
+        btModal.find('.award').text("")
+      }
       btModal.find('.submitter').text("ส่งโดย " + item.submitter)
-      btModal.find('.address').text('ตั้งอยู่ที่ ' + item.address)
-      btModal.find('.detail').text(item.detail)
+      btModal.find('.address').text('@ ' + item.address)
+      btModal.find('.detail').text('"'+item.detail+'"')
       btModal.find('.tree-image').attr('src', 'images/bigtrees/' + item.cat + '/' + item.id + '.jpg')
       
       btModal.modal('show')
