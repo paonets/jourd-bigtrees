@@ -67,7 +67,7 @@ function initMap() {
       btModal.find('.modal-title').text(item.name)
       btModal.find('.name').text(item.name)
       btModal.find('.submitter').text("ส่งโดย " + item.submitter)
-      btModal.find('.address').text('ต้นไม้ตั้งอยู่ที่ ' + item.address)
+      btModal.find('.address').text('ตั้งอยู่ที่ ' + item.address)
       btModal.find('.detail').text(item.detail)
       btModal.find('.tree-image').attr('src', 'images/bigtrees/' + item.cat + '/' + item.id + '.jpg')
       
