@@ -50,7 +50,7 @@ function initMap() {
 
 
   var map2 = new google.maps.Map(document.getElementById('map2'), {
-    zoom: 12,
+    zoom: 11.5,
     center: {lat: 13.7530479, lng: 100.4987881},
     styles: mapStyles
   });
@@ -102,7 +102,10 @@ function initMap() {
       }
       btModal.find('.submitter').text("ส่งโดย " + item.submitter)
       btModal.find('.address').text('@ ' + item.address)
-      btModal.find('.detail').text('"'+item.detail+'"')
+      if (item.detail !== "") {
+        item.detail = '"' + item.detail +'"'
+      }
+      btModal.find('.detail').text(item.detail)
       btModal.find('.tree-image').attr('src', 'images/bigtrees/' + item.cat + '/' + item.id + '.jpg')
       
       btModal.modal('show')

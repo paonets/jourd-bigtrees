@@ -31,7 +31,7 @@ h6 {
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: #333;
 }
 
@@ -275,9 +275,6 @@ ul.header-w3_pvt li span {
 /*-- //header --*/
 /* title desc */
 .title-desc p {
-    letter-spacing: 2px;
-    font-size: 13px;
-    word-spacing: 1px;
     margin-top: 10px;
     text-transform: uppercase;
 }
