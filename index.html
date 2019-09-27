@@ -249,7 +249,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       <section id="map-section" class="py-4">
         <div class="container text-center pb-sm-3">
             <h3 class="main-title-w3pvt">ตัวอย่างต้นไม้ใหญ่ในมักกะสัน</h3>
-            <p>พิกัดต้นไม้และรายละเอียดจากการใช้ Youpin สำรวจมักกะสัน เมื่อวันที่ 6 กรกฎาคม 2562 กดที่ icon ต้นไม้เพื่อดูรูปและรายละเอียดต้นไม้</p>
+            <p>พิกัดต้นไม้และรายละเอียดจากการใช้ Youpin สำรวจมักกะสัน เมื่อวันที่ 6 กรกฎาคม และ 7 กันยายน 2562 กดที่ icon ต้นไม้เพื่อดูรูปและรายละเอียดต้นไม้</p>
         </div>
         <div class="container-fluid map-container" id="map"></div>
     </section>
@@ -675,6 +675,47 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
     </div>
     <!-- //Bigtrees Map Modal -->
+     <!-- Heritage modal -->
+    <div class="modal fade" id="heritageTreeMapModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-theme">
+                    <h5 class="modal-title">Cras ultricies ligula sed.</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-left">
+                    <div class="modal-header bg-theme">
+                    <h5 class="modal-title"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-3">ชื่อต้นไม้</div>
+                            <div class="col tree-name" ></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">อายุ</div>
+                            <div class="col tree-age"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">ส่วนสูง</div>
+                            <div class="col tree-height"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">เส้นรอบวง</div>
+                            <div class="col tree-circumference"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Heritage modal -->
     <!-- js -->
     <script src="js/jquery-2.2.3.min.js"></script>
     <!-- //js -->
@@ -736,6 +777,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="js/bootstrap.js"></script>
     <script src="js/makkasan_trees.js"></script>
     <script src="js/bigtrees.js"></script>
+    <script src="js/heritage.js"></script>
     <script src="js/map.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_5bMZMxgJdumqSg2F8dL_8sLRibndeaM&callback=initMap" type="text/javascript"></script>
 

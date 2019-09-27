@@ -1,7 +1,7 @@
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 18,
-    center: {lat: 13.7535706, lng: 100.5523548},
+    zoom: 16,
+    center: {lat: 13.7543943, lng: 100.5485232},
     // styles: mapStyles
   });
 
@@ -10,7 +10,13 @@ function initMap() {
   var imageA2 = 'http://jourd-bigtrees.s3-website-ap-southeast-1.amazonaws.com/images/tree-marker-award-2.png';
   var imageA3 = 'http://jourd-bigtrees.s3-website-ap-southeast-1.amazonaws.com/images/tree-marker-award-3.png';
   
-  makkasanTrees.forEach(function(item, index) {
+  var mkTrees = makkasanTrees.concat(makkasanTrees2)
+  mkTrees.forEach(function(item, index) {
+    if (item.location.coordinates[1] > 50) {
+      var a = item.location.coordinates[1]
+      item.location.coordinates[1] = item.location.coordinates[0]
+      item.location.coordinates[0] = a
+    }
     var marker = new google.maps.Marker({
       position: {lat: item.location.coordinates[1], lng: item.location.coordinates[0]},
       map: map,
@@ -112,7 +118,44 @@ function initMap() {
     });
   })
 
+
+  var map3 = new google.maps.Map(document.getElementById('map3'), {
+    zoom: 6,
+    center: {lat: 13.2710372, lng: 100.7328525},
+    styles: mapStyles
+  });
+
+  heritage = [heritage1, heritage2]
+  heritage.forEach(function(book, bookIndex) {
+    book.forEach(function(item, index) {
+      var latlng = item.latlong.split(",").map(item => item.trim());
+      if (latlng.length < 2) {
+        return
+      }
+
+      var icon = image
+
+      var marker = new google.maps.Marker({
+        position: {lat: parseFloat(latlng[0]), lng: parseFloat(latlng[1])},
+        map: map3,
+        icon: icon
+      });
+      marker.addListener('click', function() {
+        var btModal = $('#heritageTreeMapModal')
+        btModal.find('.modal-title').text(item.name)
+        btModal.find('.tree-name').text(item.name)
+        btModal.find('.tree-age').text(item.age)
+        btModal.find('.tree-height').text(item.height)
+        btModal.find('.tree-circumference').text(item.circum)
+        btModal.find('.tree-image').attr('src', 'http://jourd-bigtrees.s3-website-ap-southeast-1.amazonaws.com/images/heritage/heritage_book' + (bookIndex+1) + '/' + (index+1) + '.jpg')
+        btModal.find('.detail').text(item.details)
+        btModal.modal('show')
+      });
+    })
+  })
 }
+
+
 
 var mapStyles = [
   {
